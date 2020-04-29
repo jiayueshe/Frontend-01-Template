@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二课 JavaScript 语句</title>
+</head>
+<body>
+    <p>简单语句</p>
+
+    
+</body>
+
+<script>
+ a=1+2
+ ;
+ debugger;
+ throw a;
+</script>
+<script>
+    for(let i=0; i<10;i++){
+        //for block里的i
+        console.log(i);
+    }
+</script>
+<script>
+    var i;
+      for(; i<10;i++){
+        let i=0;   //每次产生新的i，都是0
+        console.log(i);
+    }
+</script>
+<script>
+    //var 变量提升，效果一致
+    var i;
+    for(i=0; i<10;i++){
+        console.log(i);
+    }
+</script>
+<script>
+    for(i=0; i<10;i++){
+        console.log(i);
+    }
+    //var 变量提升，效果一致
+    var i;
+</script>
+<script>
+    for(i=0; i<10;i++){
+        console.log(i);
+    }
+    return;
+    //var 变量提升，效果一致
+    var i;
+</script>
+<script>
+    //for in 循环对象属性
+    for(let p in {a1=1,a2=2}){
+        console.log(p);
+    }
+    //for of  访问数组，其中的元素
+    //具有迭代特点
+    //Iterator  for of =>Iterator => Generaor/Array
+    for(let p of [1,2,3]){
+        console.log(p);
+    }
+
+    function *g(){
+        yield 0;
+        yield 1;
+        yield 2;
+    }
+</script>
+</html>
